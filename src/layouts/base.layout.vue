@@ -335,35 +335,32 @@ const tools = computed<ToolCategory[]>(() => [
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Top padding sets how far the taller wordmark sits below the brand icon's
-     top edge so the icon still shows; 8px below so the art's baked shadow
-     never touches the clip edge */
-  padding: 64px 3px 6px;
+  /* Top padding sets how far the wordmark text sits below the brand icon's
+     top edge so the full icon shows above it */
+  padding: 176px 3px 6px;
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  /* Hard guarantee: the block is always taller than the icon's fade extent
-     (10px top + 150px x 86% mask = 139px), so the icon can NEVER flat-cut
-     against the clip edge no matter how the wordmark sizing changes */
-  min-height: 140px;
+  /* Hard guarantee: tall enough that the full icon (10px top + 160px) never
+     flat-cuts against the clip edge */
+  min-height: 176px;
 
-  /* Brand icon behind the wordmark: large, dimmed, anchored to the top of the
-     block (never clipped) and fading out toward the bottom */
+  /* Brand icon behind the wordmark: full symbol, glowing, anchored to the
+     top of the block (never clipped, never faded out) */
   .wm-bg {
     position: absolute;
     left: 50%;
     top: 10px;
     transform: translateX(-50%);
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     object-fit: contain;
-    opacity: 0.85;
+    opacity: 1;
     pointer-events: none;
-    /* Fade must reach FULL transparency before the container's clip edge
-       (~147px block now that the wordmark art is a ~77px-tall image), otherwise
-       the icon flat-cuts at the bottom */
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 48%, rgba(0, 0, 0, 0) 86%);
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 48%, rgba(0, 0, 0, 0) 86%);
+    filter:
+      drop-shadow(0 0 6px rgba(34, 229, 255, 0.85))
+      drop-shadow(0 0 18px rgba(34, 229, 255, 0.6))
+      drop-shadow(0 0 34px rgba(255, 43, 214, 0.45));
     z-index: 0;
   }
 
