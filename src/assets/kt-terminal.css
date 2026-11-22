@@ -442,8 +442,11 @@ html:not(.dark) .kt-copy:hover {
   font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
   transition: border-color 0.15s, box-shadow 0.12s, transform 0.12s;
   /* Always-on neon glow -- the reference HUD panels are lit at rest, not
-     just on hover. Hover below layers a stronger glow on top of this. */
+     just on hover. Hover below layers a stronger glow on top of this.
+     The plain dark shadow (first layer) is real elevation, not color glow --
+     it's what makes the card visually lift off the page background. */
   box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.65),
     0 0 14px rgba(var(--kt-accent-rgb), 0.55),
     0 0 30px rgba(var(--kt-accent-rgb), 0.32),
     0 0 50px rgba(var(--kt-accent-rgb), 0.15),

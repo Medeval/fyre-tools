@@ -371,6 +371,10 @@ const tools = computed<ToolCategory[]>(() => [
     display: block;
     width: 293px;
     height: auto;
+    filter:
+      drop-shadow(0 0 6px rgba(68, 198, 243, 0.9))
+      drop-shadow(0 0 16px rgba(226, 38, 239, 0.7))
+      drop-shadow(0 4px 10px rgba(0, 0, 0, 0.6));
   }
 }
 
