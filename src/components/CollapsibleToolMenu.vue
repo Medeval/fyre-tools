@@ -157,7 +157,7 @@ function onMenuSelect() {
   color: var(--kt-accent);
   opacity: 0.85;
   transition: opacity 0.15s ease;
-  text-shadow: 0 0 8px rgba(var(--kt-accent-rgb), 0.85), 0 0 18px rgba(var(--kt-accent-rgb), 0.5);
+  text-shadow: 0 0 10px rgba(var(--kt-accent-rgb), 1), 0 0 24px rgba(var(--kt-accent-rgb), 0.7);
 }
 
 html:not(.dark) .cat-name {

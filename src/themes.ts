@@ -13,11 +13,13 @@ export const NEUTRAL_THEMES: KtThemeKey[] = ['dark', 'light', 'black'];
 
 // Per-family accent palette, copied from the app (kf.js ACCENTS)
 export const ktAccents: Record<'dark' | 'light' | 'black', Record<KtAccentKey, string>> = {
-  // 'teal' slot re-themed to the Cyberpunk HUD palette (electric cyan-blue ->
-  // hot magenta) sampled + saturation-boosted from the user's reference image.
-  dark: { red: '#DD504B', orange: '#E8962C', yellow: '#EAD900', green: '#1EA54C', teal: '#00B7FF', blue: '#50AEE8', purple: '#B982E3', magenta: '#FF52C9' },
-  light: { red: '#931A1A', orange: '#C7710F', yellow: '#2B2A24', green: '#1B5E20', teal: '#A617B0', blue: '#18608E', purple: '#5A1690', magenta: '#A60070' },
-  black: { red: '#FF2929', orange: '#FF910A', yellow: '#FFEB00', green: '#00FF66', teal: '#EE3DF2', blue: '#298DFF', purple: '#B829FF', magenta: '#FF2BBD' },
+  // Every accent boosted to neon intensity (modulate +12% brightness, +65%
+  // saturation off the originals) to match the Cyberpunk HUD reference, not
+  // just 'teal'. 'teal' itself is re-sampled from the trident icon art's own
+  // peak colors (#44C6F3 / #E226EF) for an exact match with the logo above it.
+  dark: { red: '#FF4841', orange: '#FFAC15', yellow: '#FFFF00', green: '#00EA45', teal: '#44C6F3', blue: '#49C7FF', purple: '#D08EFF', magenta: '#FF4FE6' },
+  light: { red: '#D10000', orange: '#FF8300', yellow: '#2B2A24', green: '#06820F', teal: '#A617B0', blue: '#0075CA', purple: '#6A00CE', magenta: '#F60093' },
+  black: { red: '#FF1313', orange: '#FFA600', yellow: '#FFFF00', green: '#00FF6A', teal: '#E226EF', blue: '#139CFF', purple: '#D713FF', magenta: '#FF15DE' },
 };
 
 // Theme default accents (used when the user has not picked one)
@@ -33,9 +35,9 @@ export const THEME_DEFAULT_ACCENT: Partial<Record<KtThemeKey, KtAccentKey>> = {
 // here we give Orange a proper muted selection (#4E2900 black / #5E3B16 dark)
 // so every accent follows the two-color rule on the site.
 const ktAccentSel: Record<'dark' | 'light' | 'black', Record<KtAccentKey, string>> = {
-  dark: { red: '#5E1C1C', orange: '#5E3B16', yellow: '#2A2908', green: '#1C5E38', teal: '#00496E', blue: '#1C3B5E', purple: '#411C5E', magenta: '#2A0D24' },
-  black: { red: '#380000', orange: '#4E2900', yellow: '#2E2B00', green: '#003314', teal: '#4E1052', blue: '#0A2C50', purple: '#250038', magenta: '#2E0022' },
-  light: { red: '#931A1A', orange: '#C7710F', yellow: '#FFD94D', green: '#1B5E20', teal: '#A617B0', blue: '#18608E', purple: '#5A1690', magenta: '#A60070' },
+  dark: { red: '#700400', orange: '#613E00', yellow: '#595900', green: '#005218', teal: '#004F73', blue: '#004F73', purple: '#51008B', magenta: '#750064' },
+  black: { red: '#600000', orange: '#593A00', yellow: '#595900', green: '#005925', teal: '#4E1052', blue: '#003860', purple: '#500060', magenta: '#610053' },
+  light: { red: '#D10000', orange: '#FF8300', yellow: '#FFD94D', green: '#06820F', teal: '#A617B0', blue: '#0075CA', purple: '#6A00CE', magenta: '#F60093' },
 };
 
 function hexToRgb(hex: string): [number, number, number] {

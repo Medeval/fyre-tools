@@ -433,7 +433,7 @@ html:not(.dark) .kt-copy:hover {
 .kt-terminal {
   background: var(--kt-term-bg) var(--kt-grain-img, url('/grain-a12.png')) repeat !important;
   background-size: 256px 256px !important;
-  border: 1px solid rgba(var(--kt-accent-rgb), 0.55);
+  border: 1.5px solid rgba(var(--kt-accent-rgb), 0.8);
   /* HUD panel chamfer: cut top-left and bottom-right corners instead of
      rounding, matching the angular cyberpunk reference panels */
   clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
@@ -444,9 +444,10 @@ html:not(.dark) .kt-copy:hover {
   /* Always-on neon glow -- the reference HUD panels are lit at rest, not
      just on hover. Hover below layers a stronger glow on top of this. */
   box-shadow:
-    0 0 10px rgba(var(--kt-accent-rgb), 0.35),
-    0 0 22px rgba(var(--kt-accent-rgb), 0.18),
-    inset 0 0 14px rgba(var(--kt-accent-rgb), 0.06);
+    0 0 14px rgba(var(--kt-accent-rgb), 0.55),
+    0 0 30px rgba(var(--kt-accent-rgb), 0.32),
+    0 0 50px rgba(var(--kt-accent-rgb), 0.15),
+    inset 0 0 18px rgba(var(--kt-accent-rgb), 0.1);
 }
 
 /* Corner brackets: bright accent-colored tick marks at the two chamfered
@@ -459,7 +460,7 @@ html:not(.dark) .kt-copy:hover {
   height: 26px;
   pointer-events: none;
   z-index: 2;
-  filter: drop-shadow(0 0 4px rgba(var(--kt-accent-rgb), 0.9)) drop-shadow(0 0 10px rgba(var(--kt-accent-rgb), 0.6));
+  filter: drop-shadow(0 0 5px rgba(var(--kt-accent-rgb), 1)) drop-shadow(0 0 14px rgba(var(--kt-accent-rgb), 0.8));
 }
 
 .kt-terminal::before {
@@ -483,17 +484,18 @@ html:not(.dark) .kt-copy:hover {
    `border: 1px solid var(--kt-term-border)` overrides at (0,2,0) are
    beaten; the hover rule below still wins via !important. */
 html .kt-terminal[class] {
-  border-color: rgba(var(--kt-accent-rgb), 0.55);
+  border-color: rgba(var(--kt-accent-rgb), 0.8);
 }
 
 .kt-terminal.kt-terminal:hover {
   transform: translateY(-3px);
   border-color: var(--kt-accent) !important;
   box-shadow:
-    0 10px 22px rgba(0, 0, 0, 0.28),
-    0 0 14px rgba(var(--kt-accent-rgb), 0.7),
-    0 0 36px rgba(var(--kt-accent-rgb), 0.4),
-    inset 0 0 24px rgba(var(--kt-accent-rgb), 0.12);
+    0 10px 26px rgba(0, 0, 0, 0.35),
+    0 0 18px rgba(var(--kt-accent-rgb), 0.9),
+    0 0 42px rgba(var(--kt-accent-rgb), 0.6),
+    0 0 70px rgba(var(--kt-accent-rgb), 0.3),
+    inset 0 0 28px rgba(var(--kt-accent-rgb), 0.18);
 }
 
 /* Opt-out for tall/anchored panels where the lift would clip against the
@@ -559,8 +561,8 @@ html [class*="-terminal-title"][class]:not([class*="-sub"]) {
   text-shadow:
     0 2px 5px rgba(0, 0, 0, 0.55),
     0 1px 2px rgba(0, 0, 0, 0.5),
-    0 0 8px rgba(var(--kt-accent-rgb), 0.85),
-    0 0 18px rgba(var(--kt-accent-rgb), 0.5);
+    0 0 10px rgba(var(--kt-accent-rgb), 1),
+    0 0 24px rgba(var(--kt-accent-rgb), 0.7);
 }
 
 html:not(.dark) .kt-terminal-bar-title[class],
@@ -626,8 +628,8 @@ html [class*="-category-header"][class] {
   text-shadow:
     0 2px 5px rgba(0, 0, 0, 0.55),
     0 1px 2px rgba(0, 0, 0, 0.5),
-    0 0 8px rgba(var(--kt-accent-rgb), 0.85),
-    0 0 18px rgba(var(--kt-accent-rgb), 0.5);
+    0 0 10px rgba(var(--kt-accent-rgb), 1),
+    0 0 24px rgba(var(--kt-accent-rgb), 0.7);
 }
 
 html:not(.dark) [class*="-category-header"][class] {

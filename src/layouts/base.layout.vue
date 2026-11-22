@@ -358,9 +358,9 @@ const tools = computed<ToolCategory[]>(() => [
     opacity: 1;
     pointer-events: none;
     filter:
-      drop-shadow(0 0 6px rgba(0, 183, 255, 0.9))
-      drop-shadow(0 0 18px rgba(0, 183, 255, 0.7))
-      drop-shadow(0 0 36px rgba(238, 61, 242, 0.65));
+      drop-shadow(0 0 8px rgba(68, 198, 243, 1))
+      drop-shadow(0 0 20px rgba(68, 198, 243, 0.85))
+      drop-shadow(0 0 42px rgba(226, 38, 239, 0.75));
     z-index: 0;
   }
 

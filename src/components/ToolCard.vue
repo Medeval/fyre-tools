@@ -137,8 +137,8 @@ html:not(.dark) .tc-wm-light {
   text-shadow:
     0 2px 5px rgba(0, 0, 0, 0.55),
     0 1px 2px rgba(0, 0, 0, 0.5),
-    0 0 8px rgba(var(--kt-accent-rgb), 0.85),
-    0 0 18px rgba(var(--kt-accent-rgb), 0.5);
+    0 0 10px rgba(var(--kt-accent-rgb), 1),
+    0 0 24px rgba(var(--kt-accent-rgb), 0.7);
 }
 
 html:not(.dark) .tc-title {
