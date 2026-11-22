@@ -434,11 +434,42 @@ html:not(.dark) .kt-copy:hover {
   background: var(--kt-term-bg) var(--kt-grain-img, url('/grain-a12.png')) repeat !important;
   background-size: 256px 256px !important;
   border: 1px solid var(--kt-chrome-border, #1f1f1f);
-  border-radius: 6px;
+  /* HUD panel chamfer: cut top-left and bottom-right corners instead of
+     rounding, matching the angular cyberpunk reference panels */
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
   overflow: hidden;
   position: relative;
   font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
   transition: border-color 0.15s, box-shadow 0.12s, transform 0.12s;
+}
+
+/* Corner brackets: small accent-colored tick marks at the two chamfered
+   corners, like the reference HUD panels' bracket framing */
+.kt-terminal::before,
+.kt-terminal::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.85;
+}
+
+.kt-terminal::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid var(--kt-accent);
+  border-left: 2px solid var(--kt-accent);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.kt-terminal::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid var(--kt-accent);
+  border-right: 2px solid var(--kt-accent);
+  clip-path: polygon(100% 100%, 100% 0, 0 100%);
 }
 
 /* REST STATE (universal): chrome-gray frame on all four edges, no accent.
@@ -452,7 +483,10 @@ html .kt-terminal[class] {
 .kt-terminal.kt-terminal:hover {
   transform: translateY(-3px);
   border-color: var(--kt-accent) !important;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+  box-shadow:
+    0 10px 22px rgba(0, 0, 0, 0.28),
+    0 0 16px rgba(var(--kt-accent-rgb), 0.35),
+    inset 0 0 20px rgba(var(--kt-accent-rgb), 0.08);
 }
 
 /* Opt-out for tall/anchored panels where the lift would clip against the
