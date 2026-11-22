@@ -433,7 +433,7 @@ html:not(.dark) .kt-copy:hover {
 .kt-terminal {
   background: var(--kt-term-bg) var(--kt-grain-img, url('/grain-a12.png')) repeat !important;
   background-size: 256px 256px !important;
-  border: 1px solid var(--kt-chrome-border, #1f1f1f);
+  border: 1px solid rgba(var(--kt-accent-rgb), 0.55);
   /* HUD panel chamfer: cut top-left and bottom-right corners instead of
      rounding, matching the angular cyberpunk reference panels */
   clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
@@ -441,19 +441,25 @@ html:not(.dark) .kt-copy:hover {
   position: relative;
   font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
   transition: border-color 0.15s, box-shadow 0.12s, transform 0.12s;
+  /* Always-on neon glow -- the reference HUD panels are lit at rest, not
+     just on hover. Hover below layers a stronger glow on top of this. */
+  box-shadow:
+    0 0 10px rgba(var(--kt-accent-rgb), 0.35),
+    0 0 22px rgba(var(--kt-accent-rgb), 0.18),
+    inset 0 0 14px rgba(var(--kt-accent-rgb), 0.06);
 }
 
-/* Corner brackets: small accent-colored tick marks at the two chamfered
-   corners, like the reference HUD panels' bracket framing */
+/* Corner brackets: bright accent-colored tick marks at the two chamfered
+   corners, glowing like the reference HUD panels' bracket framing */
 .kt-terminal::before,
 .kt-terminal::after {
   content: '';
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   pointer-events: none;
   z-index: 2;
-  opacity: 0.85;
+  filter: drop-shadow(0 0 4px rgba(var(--kt-accent-rgb), 0.9)) drop-shadow(0 0 10px rgba(var(--kt-accent-rgb), 0.6));
 }
 
 .kt-terminal::before {
@@ -472,12 +478,12 @@ html:not(.dark) .kt-copy:hover {
   clip-path: polygon(100% 100%, 100% 0, 0 100%);
 }
 
-/* REST STATE (universal): chrome-gray frame on all four edges, no accent.
-   The [class] bump gives (0,2,1) so scoped per-tool
+/* REST STATE (universal): lit accent frame, not a dim chrome-gray one --
+   the [class] bump gives (0,2,1) so scoped per-tool
    `border: 1px solid var(--kt-term-border)` overrides at (0,2,0) are
    beaten; the hover rule below still wins via !important. */
 html .kt-terminal[class] {
-  border-color: var(--kt-chrome-border, #1f1f1f);
+  border-color: rgba(var(--kt-accent-rgb), 0.55);
 }
 
 .kt-terminal.kt-terminal:hover {
@@ -485,8 +491,9 @@ html .kt-terminal[class] {
   border-color: var(--kt-accent) !important;
   box-shadow:
     0 10px 22px rgba(0, 0, 0, 0.28),
-    0 0 16px rgba(var(--kt-accent-rgb), 0.35),
-    inset 0 0 20px rgba(var(--kt-accent-rgb), 0.08);
+    0 0 14px rgba(var(--kt-accent-rgb), 0.7),
+    0 0 36px rgba(var(--kt-accent-rgb), 0.4),
+    inset 0 0 24px rgba(var(--kt-accent-rgb), 0.12);
 }
 
 /* Opt-out for tall/anchored panels where the lift would clip against the
@@ -549,7 +556,11 @@ html [class*="-terminal-title"][class]:not([class*="-sub"]) {
   letter-spacing: 0.5px;
   text-transform: none;
   color: var(--kt-heading, var(--kt-accent));
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.55), 0 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.55),
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 0 8px rgba(var(--kt-accent-rgb), 0.85),
+    0 0 18px rgba(var(--kt-accent-rgb), 0.5);
 }
 
 html:not(.dark) .kt-terminal-bar-title[class],
@@ -612,7 +623,11 @@ html [class*="-category-header"][class] {
   font-size: 1rem;
   font-weight: normal;
   letter-spacing: 0.08em;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.55), 0 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.55),
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 0 8px rgba(var(--kt-accent-rgb), 0.85),
+    0 0 18px rgba(var(--kt-accent-rgb), 0.5);
 }
 
 html:not(.dark) [class*="-category-header"][class] {

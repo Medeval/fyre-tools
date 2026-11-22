@@ -157,6 +157,11 @@ function onMenuSelect() {
   color: var(--kt-accent);
   opacity: 0.85;
   transition: opacity 0.15s ease;
+  text-shadow: 0 0 8px rgba(var(--kt-accent-rgb), 0.85), 0 0 18px rgba(var(--kt-accent-rgb), 0.5);
+}
+
+html:not(.dark) .cat-name {
+  text-shadow: none;
 }
 .cat-header:hover .cat-name {
   opacity: 1;
