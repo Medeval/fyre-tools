@@ -1,14 +1,18 @@
 {
-  "name": "killer-tools",
+  "name": "fyre-tools",
   "type": "module",
   "version": "2024.10.22-7ca5933",
   "packageManager": "pnpm@10.33.2",
-  "description": "Collection of handy online tools for developers and IT pros, with great UX.",
-  "author": "Steve the Killer <steve@thekiller.net> (https://thekiller.net)",
+  "description": "The Ultimate Fyre Version — a collection of handy online tools for developers and IT pros, with great UX. Forked from Killer Tools.",
+  "author": "Medeval Fyre",
+  "contributors": [
+    "Steve the Killer <steve@thekiller.net> (https://thekiller.net)",
+    "Corentin Thomasset (https://github.com/CorentinTh) — original IT-Tools"
+  ],
   "license": "GNU GPLv3",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SteveTheKiller/killer-tools-site"
+    "url": "https://github.com/Medeval/fyre-tools"
   },
   "keywords": [
     "productivity",

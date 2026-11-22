@@ -1,16 +1,18 @@
 <p align="center">
-  <a href="https://killertools.net"><img src="./public/wordmark.png" alt="killer-tools" width="640"></a>
+  <a href="https://fyretools.net"><img src="./public/wordmark.png" alt="Fyre Tools" width="640"></a>
 </p>
 
-Field techs don't have time for bloat. Every tool here exists because I needed it on the job and couldn't find something that just worked without an account, an install, or telemetry.
+**Fyre Tools — the Ultimate Fyre Version.** A Guardian-branded fork of [Killer Tools](https://killertools.net), re-forged for adding my own tools alongside the original set.
 
-I built this as a field tech for a large MSP, handling networking, sysadmin work, and endpoint support. KillerTools started as a fork of the excellent [IT-Tools](https://github.com/CorentinTh/it-tools) project by [Corentin Thomasset](https://github.com/CorentinTh) and grew into something built for the kind of work I actually do. I built it to look up Group Policy settings mid-ticket, scan a client's subnet, and pull port references without leaving the browser. The [Killer Scripts](https://github.com/SteveTheKiller/killer-scripts) library covers the jobs that come up every ticket cycle. Every script runs in PS 5.1, PS 7, and Kaseya LiveConnect with no dependencies.
+Field techs don't have time for bloat. Every tool here exists because someone needed it on the job and couldn't find something that just worked without an account, an install, or telemetry.
+
+This started as [Steve the Killer](https://theKiller.net)'s Killer Tools, which itself began as a fork of the excellent [IT-Tools](https://github.com/CorentinTh/it-tools) project by [Corentin Thomasset](https://github.com/CorentinTh). The upstream set covers looking up Group Policy settings mid-ticket, scanning a client's subnet, and pulling port references without leaving the browser — the [Killer Scripts](https://github.com/SteveTheKiller/killer-scripts) library covers everything that comes up every ticket cycle, running in PS 5.1, PS 7, and Kaseya LiveConnect with no dependencies.
 
 Everything runs in your browser. Nothing is tracked. No account is required, ever.
 
-Built and maintained by [Steve the Killer](https://theKiller.net).
+Fyre Tools fork maintained by Medeval Fyre. Upstream Killer Tools built and maintained by [Steve the Killer](https://theKiller.net).
 
-Use KillerTools from an AI agent with [KillerTools MCP](https://killertools.net/mcp).
+Use Killer Tools from an AI agent with [KillerTools MCP](https://killertools.net/mcp) (upstream).
 
 ---
 

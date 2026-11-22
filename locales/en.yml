@@ -1,12 +1,12 @@
 metadata:
-  homeTitle: Killer Tools - Handy online tools for developers and IT pros
-  homeDescription: A free, open-source collection of handy online tools for developers, sysadmins, and IT pros. Converters, generators, network utilities, and more. No ads, no tracking.
-  aboutTitle: About - Killer Tools
-  aboutDescription: 'About Killer Tools: a free, open-source collection of handy online tools for developers, sysadmins, and IT pros.'
+  homeTitle: Fyre Tools - The Ultimate Fyre Version, handy online tools for developers and IT pros
+  homeDescription: A free, open-source collection of handy online tools for developers, sysadmins, and IT pros — forked and re-forged under the Guardian banner. Converters, generators, network utilities, and more. No ads, no tracking.
+  aboutTitle: About - Fyre Tools
+  aboutDescription: 'About Fyre Tools: a free, open-source collection of handy online tools for developers, sysadmins, and IT pros, forked from Killer Tools.'
   androidTitle: Android App - Killer Tools
   androidDescription: 'Killer Tools for Android: the whole killertools.net toolbox as a native app. Currently in closed beta on Google Play, with testers needed.'
-  privacyTitle: Privacy Policy - Killer Tools
-  privacyDescription: Privacy policy for Killer Tools. No tracking, no cookies, no data collection. All tool processing happens in your browser.
+  privacyTitle: Privacy Policy - Fyre Tools
+  privacyDescription: Privacy policy for Fyre Tools. No tracking, no cookies, no data collection. All tool processing happens in your browser.
 home:
   categories:
     newestTools: Newest tools
@@ -1894,7 +1894,8 @@ pages:
     sortAZ: A – Z
     sortZA: Z – A
   about:
-    heading: About Killer Tools
+    heading: About Fyre Tools
+    forkNotice: Fyre Tools is a Guardian-branded fork of Killer Tools, maintained by Medeval Fyre to add new tools on top of the original set. The story below is Steve the Killer's, in his own words — it's why this project exists at all.
     intro: Field techs don't have time for bloat. Every tool here exists because I needed it on the job and couldn't find something that just worked without an account, an install, or telemetry.
     originPrefix: I build tools on an MSP's internal AI engineering team now, after six years of full-stack development and eight years as a field technician across several companies. KillerTools.net started as a fork of the excellent
     originMid: project by

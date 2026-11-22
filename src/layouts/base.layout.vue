@@ -60,7 +60,7 @@ const tools = computed<ToolCategory[]>(() => [
           <!-- Brand icon: large behind the wordmark, fading toward the bottom -->
           <img class="wm-bg" src="/app-icon-512.png" alt="" aria-hidden="true">
           <!-- Generated beveled wordmark art (per-accent files) -->
-          <img class="wm" :src="wmSrc" alt="KillerTOOLS">
+          <img class="wm" :src="wmSrc" alt="Fyre Tools">
         </RouterLink>
 
         <CollapsibleToolMenu :tools-by-category="tools" />
@@ -91,7 +91,7 @@ const tools = computed<ToolCategory[]>(() => [
         <!-- Mobile home link while the sidebar logo is hidden. -->
         <RouterLink to="/" class="tb-brand" :aria-label="t('layouts.base.homeLabel')">
           <img class="tb-brand-icon" src="/app-icon-512.png" alt="">
-          <img class="tb-brand-wm" :src="wmSrc" alt="KillerTOOLS">
+          <img class="tb-brand-wm" :src="wmSrc" alt="Fyre Tools">
         </RouterLink>
 
         <c-tooltip :tooltip="$t('home.uiLib')" position="bottom">

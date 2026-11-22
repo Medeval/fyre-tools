@@ -40,6 +40,9 @@ useHead({
               <img class="site-icon" src="/app-icon-512.png" alt="">
               <h1 class="site-title killer-font">{{ t('pages.about.heading') }}</h1>
             </div>
+            <p class="fork-notice">
+              {{ t('pages.about.forkNotice') }}
+            </p>
             <p>
               {{ t('pages.about.intro') }}
             </p>
